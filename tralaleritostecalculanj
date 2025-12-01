@@ -1,1 +1,89 @@
+#include <iostream>6
+#include <cmath> 
+
+using namespace std;
+
+int main() {
+    int opcion;
+    double num1, num2;
+
+    cout << "Bienvenidos a tralaleritos de calculan" << endl;
+    cout << "======================================" << endl;
+
+    do {
+        cout << "\nSelecciona una operacion:\n";
+        cout << "1. Suma\n";
+        cout << "2. Resta\n";
+        cout << "3. Multiplicacion\n";
+        cout << "4. Division\n";
+        cout << "5. Potencia\n";
+        cout << "6. Raiz cuadrada\n";
+        cout << "7. Salir\n";
+        cout << "Opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                cout << "Ingresa el primer numero: ";
+                cin >> num1;
+                cout << "Ingresa el segundo numero: ";
+                cin >> num2;
+                cout << "Resultado: " << num1 + num2 << endl;
+                break;
+
+            case 2:
+                cout << "Ingresa el primer numero: ";
+                cin >> num1;
+                cout << "Ingresa el segundo numero: ";
+                cin >> num2;
+                cout << "Resultado: " << num1 - num2 << endl;
+                break;
+
+            case 3:
+                cout << "Ingresa el primer numero: ";
+                cin >> num1;
+                cout << "Ingresa el segundo numero: ";
+                cin >> num2;
+                cout << "Resultado: " << num1 * num2 << endl;
+                break;
+
+            case 4:
+                cout << "Ingresa el primer numero: ";
+                cin >> num1;
+                cout << "Ingresa el segundo numero: ";
+                cin >> num2;
+                if (num2 == 0) {
+                    cout << "Error: No se puede dividir entre cero.\n";
+                } else {
+                    cout << "Resultado: " << num1 / num2 << endl;
+                }
+                break;
+
+            case 5:
+                cout << "Ingresa la base: ";
+                cin >> num1;
+                cout << "Ingresa el exponente: ";
+                cin >> num2;
+                cout << "Resultado: " << pow(num1, num2) << endl;
+                break;
+
+            case 6:
+                cout << "Ingresa el numero: ";
+                cin >> num1;
+                if (num1 < 0) {
+                    cout << "Error: No se puede calcular la raiz de un numero negativo.\n";
+                } else {
+                    cout << "Resultado: " << sqrt(num1) << endl;
+                }
+                break;
+
+            case 7:
+                cout << "¡Gracias por usar tralaleritos de calculan!\n";
+                break;
+
+            default:
+                cout << "Opcion no valida. Intenta de nuevo.\n";
+        }
+
+    } while (opcion != 7);
 
