@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int vector[20];
+
+    for(int i = 0; i < 20; i++) {
+        printf("Ingrese el numero %d: ", i+1);
+        scanf("%d", &vector[i]);
+    }
+
+    printf("Numeros en posiciones pares:\n");
+
+    for(int i = 0; i < 20; i += 2) {
+        printf("Posicion %d: %d\n", i, vector[i]);
+    }
+
+    return 0;
+}
